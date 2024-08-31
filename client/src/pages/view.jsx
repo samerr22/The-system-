@@ -17,8 +17,6 @@ export default function supplierAdd() {
   const [validation, setValidation] = useState(null);
   const { viewId } = useParams();
   console.log(formData);
-    
-  
 
   useEffect(() => {
     try {
@@ -48,45 +46,44 @@ export default function supplierAdd() {
     }
   }, [viewId]);
 
-    // Function to generate and download PDF
-    const downloadPDF = () => {
-        const doc = new jsPDF();
-    
-        doc.setFontSize(16);
-        doc.text("Contract Details", 20, 20);
-    
-        doc.setFontSize(12);
-        const y = 30;
-        let offsetY = y;
-    
-        const addText = (label, value) => {
-          doc.text(`${label}: ${value}`, 20, offsetY);
-          offsetY += 10;
-        };
-    
-        addText("Supplier's Name", formData.name || "N/A");
-        addText("Contact Person", formData.contactp || "N/A");
-        addText("Start Date", formData.startdate || "N/A");
-        addText("End Date", formData.enddate || "N/A");
-        addText("Terms and Agreement", formData.Terms || "N/A");
-        addText("Payment Conditions", formData.payment || "N/A");
-        addText("Delivery Schedule", formData.delivery || "N/A");
-        addText("Renewal Conditions", formData.Renewal || "N/A");
-        addText("Status", formData.status || "N/A");
-    
-        doc.save("contract-details.pdf");
-      };
-    
+  // Function to generate and download PDF
+  const downloadPDF = () => {
+    const doc = new jsPDF();
+
+    doc.setFontSize(16);
+    doc.text("Contract Details", 20, 20);
+
+    doc.setFontSize(12);
+    const y = 30;
+    let offsetY = y;
+
+    const addText = (label, value) => {
+      doc.text(`${label}: ${value}`, 20, offsetY);
+      offsetY += 10;
+    };
+
+    addText("Supplier's Name", formData.name || "N/A");
+    addText("Contact Person", formData.contactp || "N/A");
+    addText("Start Date", formData.startdate || "N/A");
+    addText("End Date", formData.enddate || "N/A");
+    addText("Terms and Agreement", formData.Terms || "N/A");
+    addText("Payment Conditions", formData.payment || "N/A");
+    addText("Delivery Schedule", formData.delivery || "N/A");
+    addText("Renewal Conditions", formData.Renewal || "N/A");
+    addText("Status", formData.status || "N/A");
+
+    doc.save("contract-details.pdf");
+  };
 
   return (
-    <div className="  min-h-screen ">
+    <div className="  min-h-screen  bg-slate-200">
       <div className="absolute transform -translate-x-0 translate-y-0 top-1  flex justify-center items-center">
         <div className="">
           <div className=" lg:mt-32 mt-[270px]  md:mt-20 lg:ml-[300px]  md:ml-[240px] ml-[4px] ">
-            <div className=" flex justify-center items-center ">
-              <div className="">
+            <div className=" flex justify-center items-center ml-5 ">
+              <div className=" ml-18">
                 <div>
-                  <h1 className="text-4xl font-serif opacity-70 uppercase text-gray-800">
+                  <h1 className="text-4xl font-serif  opacity-70 uppercase text-gray-800">
                     contract
                   </h1>
                 </div>
@@ -97,13 +94,16 @@ export default function supplierAdd() {
                     </button>
                   </Link>
                 </div>
-                <button onClick={downloadPDF} className=" absolute w-32 shadow-sm border border-white  bg-blue-700 text-lg text-white hover:opacity-90  uppercase rounded-xl   ml-[600px]">
+                <button
+                  onClick={downloadPDF}
+                  className=" absolute w-32 shadow-sm border border-white  bg-blue-700 text-lg text-white hover:opacity-90  uppercase rounded-xl   ml-[410px]"
+                >
                   download
                 </button>
               </div>
             </div>
 
-            <div className="flex justify-center items-center gap-80">
+            <div className="flex justify-center items-center ml-8 gap-80">
               <div>
                 <div className="mt-10">
                   <div className="mt-4">
@@ -177,7 +177,7 @@ export default function supplierAdd() {
 
             <div>
               <div className="mt-10">
-                <div className="mt-4">
+                <div className="mt-4 ml-8">
                   <h1 className="font-serif text-3xl  text-gray-700 text-opacity-70">
                     status
                   </h1>

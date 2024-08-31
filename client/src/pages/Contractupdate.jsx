@@ -101,7 +101,7 @@ export default function supplierAdd() {
         setPublishError(null);
         console.log("sussessfull");
         alert("suscessfull");
-        navigate("/table");
+      
       }
     } catch (error) {
       setPublishError("Something went wrong");
@@ -136,7 +136,7 @@ export default function supplierAdd() {
 
 
   return (
-    <div className="  min-h-screen ">
+    <div className=" bg-slate-200 min-h-screen ">
       <div className="absolute transform -translate-x-0 translate-y-0 top-1  flex justify-center items-center">
         <div className="">
           <div className=" lg:mt-32 mt-[270px]  md:mt-20 lg:ml-[300px]  md:ml-[240px] ml-[4px] ">
@@ -160,9 +160,9 @@ export default function supplierAdd() {
               <div className="flex justify-center items-center">
                 <div className="mt-2">
                   <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-                  <div className="absolute rounded-xl hover: w-[100px] ml-[860px] bg-slate-400 bg-opacity-25 mb-4 ">
-                          <button className="ml-2 whitespace-nowrap" onClick={handlefromsubmit}>
-                            Edit request 
+                  <div className="absolute rounded-xl hover: w-[150px] hover:opacity-90 h-8 ml-[810px] bg-blue-600 mt-[-10px] ">
+                          <button className="ml-4 mt-1 hover:opacity-90 uppercase text-white whitespace-nowrap" onClick={handlefromsubmit}>
+                            Send request 
                           </button>
                         </div>
                     <div className="flex justify-center items-center gap-10  ">
@@ -231,7 +231,7 @@ export default function supplierAdd() {
                         </div>
                         <div className="mt-10">
                           <button
-                            className=" bg-blue-950 bg-opacity-80 border-white border border-opacity-50 text-white p-3 rounded-lg w-[460px] h-[45px] hover:opacity-90"
+                            className=" bg-blue-600 bg-opacity-80 border-white border border-opacity-50 text-white p-3 rounded-lg w-[460px] h-[45px] hover:opacity-90"
                             type="submit"
                           >
                             <div className="flex items-center justify-center">

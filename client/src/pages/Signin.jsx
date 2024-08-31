@@ -48,24 +48,24 @@ export default function SignIn() {
   };
 
   return (
-    <div className="  min-h-screen ">
+    <div className="  min-h-screen bg-slate-200 ">
     
         <div>
 
         </div>
   
         <div className="">
-          <div className=" mt-20 lg:ml-[30px] md:ml-[240px] ml-[4px] ">
+          <div className="  lg:ml-[30px] md:ml-[240px] ml-[4px] ">
             <div className=" flex justify-center items-center">
               <div>
                
 
-                <h1 className="text-4xl font-serif opacity-70 text-gray-800">
+                <h1 className="text-4xl font-serif mt-10 opacity-70 text-gray-800">
                  Login
                 </h1>
               </div>
             </div>
-            <div className="bg-gray-200 boder border-black bg-opacity-80 w-[480px]  md:w-[550px] lg:w-[550px] border h-96 mt-8 max-w-3xl mx-auto rounded-3xl border-opacity-50 ">
+            <div className="bg-white shadow-lg bg-opacity-80 w-[480px]  md:w-[550px] lg:w-[550px] border h-96 mt-8 max-w-3xl mx-auto rounded-3xl border-opacity-50 ">
               <div className="flex justify-center items-center   ">
                 <div className="mt-16">
                   <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
@@ -114,10 +114,10 @@ export default function SignIn() {
                       )}
                     </button>
                    <div>
-                   <div className="flex gap-2 text-sm mt-2 ">
+                   <div className="flex gap-2 text-sm mb-8  ">
             <span>Have an account?</span>
-            <Link to="/sign-in" className="text-blue-500">
-              Sign In
+            <Link to="/sign-up" className="text-blue-500">
+              Sign up
             </Link>
           </div>
                    </div>

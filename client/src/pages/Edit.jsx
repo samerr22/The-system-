@@ -89,7 +89,7 @@ export default function Schedul() {
   };
 
   return (
-    <div className="h-[600px] relative">
+    <div className="h-[600px] bg-slate-200 relative">
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
         <div>
           <div className=" flex justify-center items-center">
@@ -110,7 +110,7 @@ export default function Schedul() {
                     <input
                       type="text"
                       placeholder="Search... "
-                      className=" w-[350px] h-10 rounded-full shadow-xl  border bg-slate-600  border-white bg-opacity-10"
+                      className=" w-[350px] h-10 rounded-full shadow-xl  bg-white border    bg-opacity-10"
                       onChange={(e) => setQuery(e.target.value)}
                     />
                   </div>
@@ -120,7 +120,7 @@ export default function Schedul() {
           </div>
         </div>
 
-        <div className=" mt-16 lg:w-[900px] xl:w-[1300px] lg:h-[350px] w-[450px]  md:w-[700px] rounded-lg bg-opacity-65   bg-slate-500">
+        <div className=" mt-16 lg:w-[900px] xl:w-[1300px] lg:h-[350px] w-[450px]  md:w-[700px] rounded-lg bg-opacity-65   bg-gray-300">
           <div className="">
             <div className="max-h-80 overflow-y-auto">
               <table className="w-full border border-white border-opacity-50 divide-y divide-black shadow-md">

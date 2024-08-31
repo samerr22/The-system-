@@ -89,7 +89,7 @@ export default function Schedul() {
   };
 
   return (
-    <div className="h-[600px] relative">
+    <div className="h-[600px] bg-slate-200 relative">
       <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10">
         <div>
           <div className=" flex justify-center items-center">
@@ -97,7 +97,7 @@ export default function Schedul() {
               <h1 className="text-4xl font-serif uppercase opacity-70 text-gray-800">
                 Contract management dashboard
               </h1>
-              <div className=" absolute z-50 bg-green-800 w-48 h-36 mb-10 rounded-lg shadow-sm ml-[810px]">
+              <div className=" absolute z-50 bg-green-800 w-48 h-36 mb-10 rounded-lg shadow-xl ml-[810px]">
                 <div className="flex justify-center items-start mt-2 mb-2">
                   <button className="font-serif text-white uppercase hover:opacity-60 cursor-pointer text-sm">
                     navigation panel
@@ -147,7 +147,7 @@ export default function Schedul() {
                     <input
                       type="text"
                       placeholder="Search... "
-                      className=" w-[350px] h-10 rounded-full shadow-xl  border bg-slate-600  border-white bg-opacity-10"
+                      className=" w-[350px] h-10 rounded-full border   bg-white shadow-lg  bg-opacity-10"
                       onChange={(e) => setQuery(e.target.value)}
                     />
                   </div>
@@ -157,10 +157,10 @@ export default function Schedul() {
           </div>
         </div>
 
-        <div className=" mt-16 lg:w-[900px] xl:w-[1300px] lg:h-[350px] w-[450px]  md:w-[700px] rounded-lg bg-opacity-65   bg-slate-500">
+        <div className=" mt-16 lg:w-[900px] xl:w-[1300px] lg:h-[350px] w-[450px]  md:w-[700px] rounded-lg bg-opacity-65   bg-gray-300">
           <div className="">
             <div className="max-h-80 overflow-y-auto">
-              <table className="w-full border border-white border-opacity-50 divide-y divide-black shadow-md">
+              <table className="w-full border border-white  border-opacity-50 divide-y divide-black shadow-xl">
                 <thead className="bg-none divide-x divide-black">
                   <tr>
                     <th className="px-6 py-3 text-left text-xs bg-green-800 bg-opacity-90 text-white font-medium text-opacity-80   uppercase">

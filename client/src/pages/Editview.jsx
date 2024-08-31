@@ -49,11 +49,11 @@ export default function supplierAdd() {
   }, [eId]);
 
   return (
-    <div className="  min-h-screen ">
+    <div className=" bg-slate-200 min-h-screen ">
       <div className="absolute transform -translate-x-0 translate-y-0 top-1  flex justify-center items-center">
         <div className="">
           <div className=" lg:mt-32 mt-[270px]  md:mt-20 lg:ml-[300px]  md:ml-[240px] ml-[4px] ">
-            <div className=" flex justify-center items-center ">
+            <div className=" flex justify-center items-center ml-10 ">
               <div className="">
                 <div>
                   <h1 className="text-4xl font-serif opacity-70 uppercase text-gray-800">
@@ -71,7 +71,7 @@ export default function supplierAdd() {
               </div>
             </div>
 
-            <div className="flex justify-center items-center gap-80">
+            <div className="flex justify-center items-center gap-80 ml-10">
               <div>
                 <div className="mt-10">
                   <div className="mt-4">
@@ -145,7 +145,7 @@ export default function supplierAdd() {
 
             <div>
               <div className="mt-10">
-                <div className="mt-4">
+                <div className="mt-4 ml-10">
                   <h1 className="font-serif text-3xl  text-gray-700 text-opacity-70">
                     status
                   </h1>

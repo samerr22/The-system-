@@ -75,7 +75,7 @@ export default function supplierAdd() {
  
 
   return (
-    <div className="  min-h-screen ">
+    <div className=" bg-slate-200  min-h-screen ">
       <div className="absolute transform -translate-x-0 translate-y-0 top-1  flex justify-center items-center">
         <div className="">
           <div className=" lg:mt-32 mt-[270px]  md:mt-20 lg:ml-[300px]  md:ml-[240px] ml-[4px] ">
@@ -163,7 +163,7 @@ export default function supplierAdd() {
                         </div>
                         <div className="mt-10">
                           <button
-                            className=" bg-blue-950 bg-opacity-80 border-white border border-opacity-50 text-white p-3 rounded-lg w-[460px] h-[45px] hover:opacity-90"
+                            className=" bg-blue-600 bg-opacity-80 border-white border border-opacity-50 text-white p-3 rounded-lg w-[460px] h-[45px] hover:opacity-90"
                             type="submit"
                           >
                             <div className="flex items-center justify-center">
