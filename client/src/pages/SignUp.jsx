@@ -8,6 +8,7 @@ export default function SignUp() {
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  console.log(formData)
 
   const handlchange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
@@ -48,19 +49,65 @@ export default function SignUp() {
         
 
         <div className="flex-1">
-          <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
-            <div>
-            <h3 className="font-semibold text-slate-400 ml-1">Email</h3>
+          <form className="flex flex-col ml-[-100px] gap-8" onSubmit={handleSubmit}>
+
+
+<div className="flex justify-center items-center gap-10  ">
+<div className="">
+  <div className="flex justify-center items-center">
+    <div className="font-serif  uppercase text-xl">
+    register
+    </div>
+  
+  </div>
+
+ 
+            <div className="">
+            <h3 className="font-semibold text-slate-800 uppercase ml-1">suplier's name</h3>
               <input
               className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
                 type="text"
-                placeholder="Username"
+                placeholder=""
+                id="supname"
+                onChange={handlchange}
+              />
+            </div>
+            <div className="mt-4">
+             <h3 className="font-semibold text-slate-800 uppercase ml-1">contact person</h3>
+
+
+              <input
+               className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
+                type="text"
+                placeholder=""
+                id="contname"
+                onChange={handlchange}
+              />
+            </div>
+            <div className="mt-4">
+            <h3 className="font-semibold text-slate-800 uppercase ml-1">contact number</h3>
+              <input
+               className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
+                type="text"
+                placeholder=""
+                id="contactN"
+                onChange={handlchange}
+              />
+            </div>
+            <div className="mt-4">
+             <h3 className="font-semibold text-slate-800 uppercase ml-1">username</h3>
+
+
+              <input
+               className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
+                type=""
+                placeholder=""
                 id="username"
                 onChange={handlchange}
               />
             </div>
-            <div>
-             <h3 className="font-semibold text-slate-400 ml-1">Username</h3>
+            <div className="mt-4">
+             <h3 className="font-semibold text-slate-800 uppercase ml-1">email</h3>
 
 
               <input
@@ -71,17 +118,90 @@ export default function SignUp() {
                 onChange={handlchange}
               />
             </div>
-            <div>
-            <h3 className="font-semibold text-slate-400 ml-1">Password</h3>
+            <div className="mt-4">
+             <h3 className="font-semibold text-slate-800 uppercase ml-1">password</h3>
+
+
               <input
                className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
                 type="password"
-                placeholder="Password"
+                placeholder=""
                 id="password"
                 onChange={handlchange}
               />
             </div>
-            <button
+            </div>
+
+           
+
+
+
+
+
+
+            <div>
+            <div className="flex justify-center items-center">
+    <div className="font-serif  uppercase text-xl">
+    Company
+    </div>
+  
+  </div>
+            <div>
+            <h3 className="font-semibold text-slate-800 uppercase ml-1">head office address</h3>
+              <input
+              className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
+                type="text"
+                placeholder=""
+                id="headAddress"
+                onChange={handlchange}
+              />
+            </div>
+            <div className="mt-4">
+             <h3 className="font-semibold text-slate-800 uppercase ml-1">factory address</h3>
+
+
+              <input
+               className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
+                type="text"
+                placeholder=""
+                id="factoryAddress"
+                onChange={handlchange}
+              />
+            </div>
+            <div className="mt-4">
+            <h3 className="font-semibold text-slate-800 uppercase ml-1">country of origin</h3>
+              <input
+               className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
+                type="text"
+                placeholder=""
+                id="counuty"
+                onChange={handlchange}
+              />
+            </div>
+
+            <div className="mt-4">
+            <h3 className="font-semibold text-slate-800 uppercase ml-1">business registration number</h3>
+              <input
+               className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
+                type="text"
+                placeholder=""
+                id="businessNumber"
+                onChange={handlchange}
+              />
+            </div>
+
+            <div className="mt-4">
+            <h3 className="font-semibold text-slate-800 uppercase ml-1">tax identification number</h3>
+              <input
+               className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
+                type="text"
+                placeholder=""
+                id="taxnumber"
+                onChange={handlchange}
+              />
+            </div>
+            <div className="mt-10">
+            <button 
               className=" bg-blue-700 text-white p-3 rounded-lg w-[460px] h-11 hover:opacity-90"
               type="submit"
               disabled={loading}
@@ -96,9 +216,22 @@ export default function SignUp() {
                 "Sign Up"
               )}
             </button>
+
+            </div>
+            
+
+            </div>
+
+</div>
+            
+          
+
+
+
+           
           
           </form>
-          <div className="flex gap-2 text-sm mt-5">
+          <div className="flex gap-2 text-sm mt-5 ml-[420px]">
             <span>Have an account?</span>
             <Link to="/sign-in" className="text-blue-500">
               Sign In
