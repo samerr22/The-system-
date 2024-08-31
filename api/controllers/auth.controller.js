@@ -2,7 +2,14 @@ import User from "../models/user.model.js";
 import jwt from "jsonwebtoken";
 
 export const signup = async (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { username, email, password ,supname,
+    contname,
+    contactN,
+    headAddress,
+    factoryAddress,
+    counuty,
+    businessNumber,
+    taxnumber } = req.body;
 
   if (
     !username ||
@@ -76,35 +83,10 @@ export const signgin = async (req, res, next) => {
 
 //user update
 export const updateUser = async (req, res, next) => {
-  if (req.user.id !== req.params.userId) {
-    return next(errorHandle(403, "You are not allowed to update this user"));
-  }
-  if (req.body.password) {
-    if (req.body.password.length < 6) {
-      return next(errorHandle(400, "Password must be t least 6 characters"));
-    }
-   
-  }
+  
+ 
 
-  if (req.body.username) {
-    if (req.body.username.length < 7 || req.body.username.length > 20) {
-      return next(
-        errorHandle(400, "Username must be between 7 or 20 characters")
-      );
-    }
-
-    if (req.body.username.includes(" ")) {
-      return next(errorHandle(400, "username cannot contain spaces"));
-    }
-    if (req.body.username !== req.body.username.toLowerCase()) {
-      return next(errorHandle(400, "Usernme must be lowercase"));
-    }
-    if (!req.body.username.match(/^[a-zA-Z0-9]+$/)) {
-      return next(
-        errorHandle(400, "username can only contain letters and numbers")
-      );
-    }
-}
+ 
     try {
       const updatedUser = await User.findByIdAndUpdate(
         req.params.userId,
