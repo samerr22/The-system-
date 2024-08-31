@@ -5,9 +5,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PrivateRoute from "./components/PrivateRoute";
 import Tab from "./pages/Table";
-import SupplierAdd from "./pages/supplierAdd";
-import Supupdate from "./pages/Supdate";
+import Contarct from "./pages/contract";
+import Contractupdate from "./pages/Contractupdate";
+import Profile from "./pages/profile";
 import Order from "./pages/order";
+import View from "./pages/view";
+import Edit from "./pages/Edit";
+import Editview from "./pages/Editview";
 
 
 
@@ -21,8 +25,12 @@ export default function App() {
 
         <Route element={<PrivateRoute />}>
           <Route path="/table" element={<Tab />} />
-          <Route path="/add" element={<SupplierAdd />} />
-          <Route path="/update/:upId" element={<Supupdate />} />
+          <Route path="/add" element={<Contarct/>} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/edit" element={<Edit />} />
+          <Route path="/editview/:eId" element={<Editview />} />
+          <Route path="/update/:upId" element={<Contractupdate />} />
+          <Route path="/view/:viewId" element={<View />} />
           <Route path="/order" element={<Order />} />
         </Route>
       </Routes>

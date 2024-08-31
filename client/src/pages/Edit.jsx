@@ -19,7 +19,7 @@ export default function Schedul() {
   useEffect(() => {
     const fetchinfo = async () => {
       try {
-        const res = await fetch(`/api/contract/getAll`);
+        const res = await fetch(`/api/edit/EgetAll`);
         const data = await res.json();
         console.log(data);
 
@@ -94,44 +94,7 @@ export default function Schedul() {
         <div>
           <div className=" flex justify-center items-center">
             <div>
-              <h1 className="text-4xl font-serif uppercase opacity-70 text-gray-800">
-                Contract management dashboard
-              </h1>
-              <div className=" absolute z-50 bg-green-800 w-48 h-36 mb-10 rounded-lg shadow-sm ml-[810px]">
-                <div className="flex justify-center items-start mt-2 mb-2">
-                  <button className="font-serif text-white uppercase hover:opacity-60 cursor-pointer text-sm">
-                    navigation panel
-                  </button>
-                </div>
-
-                <hr className="bg-white" />
-                <div className="flex justify-center items-start mt-2 mb-2">
-                  <Link to={`/add`}>
-                    <div className="font-serif text-white uppercase hover:opacity-60 cursor-pointer text-sm">
-                      new contract
-                    </div>
-                  </Link>
-                </div>
-
-                <hr className="bg-white" />
-                <div className="flex justify-center items-start mt-2 mb-2">
-                <Link to={`/edit`}>
-                  <div className="font-serif text-white uppercase hover:opacity-60 cursor-pointer text-sm">
-                    Edit request
-                  </div>
-                  </Link>
-                </div>
-
-                <hr className="bg-white" />
-
-                <div className="flex justify-center items-start mt-2 mb-2">
-                <Link to={`/profile`}>
-                  <div className="font-serif text-white uppercase hover:opacity-60 cursor-pointer text-sm">
-                    Account
-                  </div>
-                  </Link>
-                </div>
-              </div>
+              
             </div>
           </div>
           <div></div>
@@ -181,12 +144,17 @@ export default function Schedul() {
                     <th className="px-6 py-3 text-left text-xs font-medium  bg-green-800 bg-opacity-90 text-white text-opacity-80    uppercase">
                       actions
                     </th>
+               {/*
+               
+                  
                     <th className="px-6 py-3 text-left text-xs font-medium  bg-green-800 bg-opacity-90 text-white text-opacity-80    uppercase">
                       edit
                     </th>
                     <th className="px-6 py-3 text-left text-xs font-medium bg-green-800 bg-opacity-90 text-white text-opacity-80   uppercase">
                       Delete
                     </th>
+               
+               */}    
                   </tr>
                 </thead>
 
@@ -219,14 +187,17 @@ export default function Schedul() {
                               {Employe.status}
                             </div>
                           </td>
-
                           <td className="  whitespace-nowrap">
-                            <Link to={`/view/${Employe._id}`}>
+                            <Link to={`/editview/${Employe._id}`}>
                               <button className="w-24 bg-green-500 hover:opacity-80 rounded-lg  h-10 bg-opacity-70 border-white border border-opacity-45 text font-serif text-white text-opacity-80 ">
                                 view
                               </button>
                             </Link>
                           </td>
+
+ {/**
+  * 
+  * 
                           <td className="  whitespace-nowrap">
                             <Link to={`/update/${Employe._id}`}>
                               <button className="w-24 bg-green-500 hover:opacity-80 rounded-lg  h-10 bg-opacity-70 border-white border border-opacity-45 text font-serif text-white text-opacity-80 ">
@@ -246,6 +217,12 @@ export default function Schedul() {
                               </button>
                             </span>
                           </td>
+  * 
+  * 
+  */}
+                         
+
+
                         </tr>
                       ))}
                     </>
@@ -309,3 +286,4 @@ export default function Schedul() {
     </div>
   );
 }
+

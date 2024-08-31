@@ -49,27 +49,23 @@ export default function SignIn() {
 
   return (
     <div className="  min-h-screen ">
-      <img
-        src={girl}
-        alt=""
-        className="w-full h-[700px] opacity-95 object-cover "
-      />
+    
+        <div>
 
-      <div className="absolute transform -translate-x-0 translate-y-0 top-1  flex justify-center items-center">
+        </div>
+  
         <div className="">
-          <div className=" mt-20 lg:ml-[450px] md:ml-[240px] ml-[4px] ">
+          <div className=" mt-20 lg:ml-[30px] md:ml-[240px] ml-[4px] ">
             <div className=" flex justify-center items-center">
               <div>
-                <h1 className="text-4xl ml-12 font-serif opacity-70 text-gray-800">
-                  Supplier
-                </h1>
+               
 
                 <h1 className="text-4xl font-serif opacity-70 text-gray-800">
-                  Manager Login
+                 Login
                 </h1>
               </div>
             </div>
-            <div className="bg-blue-800 bg-opacity-10 w-[480px]  md:w-[550px] lg:w-[550px] border h-96 mt-8 max-w-3xl mx-auto rounded-3xl border-opacity-50 ">
+            <div className="bg-gray-200 boder border-black bg-opacity-80 w-[480px]  md:w-[550px] lg:w-[550px] border h-96 mt-8 max-w-3xl mx-auto rounded-3xl border-opacity-50 ">
               <div className="flex justify-center items-center   ">
                 <div className="mt-16">
                   <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
@@ -78,7 +74,7 @@ export default function SignIn() {
                         Email
                       </h3>
                       <input
-                        className=" bg-slate-100 bg-opacity-40 border-white border-opacity-50  p-3 rounded-lg w-[460px] h-11"
+                        className=" bg-slate-100  border border-black bg-opacity-40  border-opacity-50  p-3 rounded-lg w-[460px] h-11"
                         type="email"
                         placeholder="name@company.com"
                         id="email"
@@ -90,7 +86,7 @@ export default function SignIn() {
                         Password
                       </h3>
                       <input
-                        className=" bg-slate-100 bg-opacity-40 border-white p-3 border-opacity-50 rounded-lg w-[460px] h-11"
+                        className=" bg-slate-100 border border-black bg-opacity-40  p-3 border-opacity-50 rounded-lg w-[460px] h-11"
                         type="password"
                         placeholder="Password"
                         id="password"
@@ -98,7 +94,7 @@ export default function SignIn() {
                       />
                     </div>
                     <button
-                      className=" bg-blue-800 mt-6 bg-opacity-80 border-white border border-opacity-50 text-white p-3 rounded-lg w-[460px] h-[45px] hover:opacity-90"
+                      className=" bg-blue-600 mt-6 bg-opacity-80 border-white border border-opacity-50 text-white p-3 rounded-lg w-[460px] h-[45px] hover:opacity-90"
                       type="submit"
                       disabled={loading}
                     >
@@ -117,7 +113,17 @@ export default function SignIn() {
                         </>
                       )}
                     </button>
+                   <div>
+                   <div className="flex gap-2 text-sm mt-2 ">
+            <span>Have an account?</span>
+            <Link to="/sign-in" className="text-blue-500">
+              Sign In
+            </Link>
+          </div>
+                   </div>
+        
                   </form>
+                 
 
                   {errorMessage && (
                     <p className="mt-5 text-red-600 bg-red-300 w-300 h-7 rounded-lg text-center ">
@@ -125,11 +131,13 @@ export default function SignIn() {
                     </p>
                   )}
                 </div>
+
+              
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+   
   );
 }

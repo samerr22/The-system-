@@ -7,6 +7,7 @@ export default function SignUp() {
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [validation, setValidation] = useState(null);
   const navigate = useNavigate();
   console.log(formData)
 
@@ -40,6 +41,19 @@ export default function SignUp() {
     } catch (error) {
       setErrorMessage(error.message);
       setLoading(false);
+    }
+  };
+
+   //contact number validation
+   const handleContactChange = (e) => {
+    const contactN = e.target.value.trim();
+    const contactPattern = /^[0-9]{10}$/;
+
+    if (!contactPattern.test(contactN)) {
+      setValidation("Contact number must be a 10-digit number");
+    } else {
+      setFormData({ ...formData, contactN });
+      setValidation(null); // Clear error message if contact number is valid
     }
   };
 
@@ -90,9 +104,15 @@ export default function SignUp() {
                className=" bg-slate-100 p-3 rounded-lg w-[460px] h-11"
                 type="text"
                 placeholder=""
+                maxLength={10}
                 id="contactN"
-                onChange={handlchange}
+                onChange={handleContactChange} 
               />
+               {validation && (
+                    <p className="mt-0 text-red-600 h-0     rounded-lg text-center ">
+                      {validation}
+                    </p>
+                  )}
             </div>
             <div className="mt-4">
              <h3 className="font-semibold text-slate-800 uppercase ml-1">username</h3>
@@ -131,12 +151,6 @@ export default function SignUp() {
               />
             </div>
             </div>
-
-           
-
-
-
-
 
 
             <div>

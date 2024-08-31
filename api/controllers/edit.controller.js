@@ -8,7 +8,7 @@ import Edit from "../models/edit.model.js";
 export const EcreatesContract = async (req, res, next) => {
   
 
-  const {  name,contactp,startdate,enddate, Terms , payment,delivery, Renewal } = req.body;
+  const {  name,contactp,startdate,enddate, Terms , payment,delivery, Renewal, status } = req.body;
 
   const newSuplier = new Edit({
    
@@ -19,7 +19,8 @@ export const EcreatesContract = async (req, res, next) => {
     Terms,
     payment,
     delivery,
-    Renewal
+    Renewal,
+    status
 
 
 
@@ -89,6 +90,7 @@ export const EupdatesContract = async (req, res, next) => {
           payment: req.body.payment,
           delivery: req.body.delivery,
           Renewal: req.body.Renewal,
+          status: req.body.status, 
           
         },
       },
