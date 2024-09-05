@@ -12,7 +12,8 @@ import Order from "./pages/order";
 import View from "./pages/view";
 import Edit from "./pages/Edit";
 import Editview from "./pages/Editview";
-
+import ClientContractDash from "./pages/ClientContractDash";
+import CEdit from "./pages/CEdit";
 
 
 export default function App() {
@@ -25,11 +26,13 @@ export default function App() {
 
         <Route element={<PrivateRoute />}>
           <Route path="/table" element={<Tab />} />
+          <Route path="/clientT" element={<ClientContractDash />} />
           <Route path="/add" element={<Contarct/>} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/edit" element={<Edit />} />
           <Route path="/editview/:eId" element={<Editview />} />
           <Route path="/update/:upId" element={<Contractupdate />} />
+          <Route path="/updatee/:viewId" element={<CEdit />} />
           <Route path="/view/:viewId" element={<View />} />
           <Route path="/order" element={<Order />} />
         </Route>

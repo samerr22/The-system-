@@ -144,9 +144,12 @@ export default function DashProfile() {
               </div>
             </div>
             <div className="flex justify-center items-center">
-              <Link to={`/table`}>
-                <button className="text-md  font-serif underline text-gray-800">
-                  Back
+             
+            </div>
+            <div className="flex justify-center items-center">
+              <Link to={`/clientT`}>
+                <button className="text-lg  bg-blue-600 w-24 text-white rounded-xl  h-10 hover:opacity-80 ml-[1280px] font-serif  ">
+                  contract 
                 </button>
               </Link>
             </div>
