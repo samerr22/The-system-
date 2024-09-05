@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 import authRoutes from './routes/auth.route.js';
 import Contract from './routes/contract.route.js';
 import Edit from './routes/edit.route.js';
+import Edit from './routes/edit.route.js ';
 
 import cookieParser from 'cookie-parser';
 
